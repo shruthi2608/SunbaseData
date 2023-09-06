@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">New Customer <i class="fas fa-user"></i></span>
+                </a>
+                <a href="/logout" class="border-shadow">
+                    <span class="text-gradient">Logout <i class="fas fa-sign-out-alt"></i></span>
+                </a>
+            </div>
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Street</th>
+                          <th>Address</th>
+                          <th>City</th>
+                          <th>State</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                      </thead>
+                    <tbody>
+                        <% for(var i = 0; i < customerList.length; i++) { %>
+                            <tr>
+                                <td style="max-width: 100px"><%= customerList[i].first_name %></td>
+                                <td><%= customerList[i].last_name %></td>
+                                <td><%= customerList[i].street %></td>
+                                <td><%= customerList[i].address %></td>
+                                <td><%= customerList[i].city %></td>
+                                <td><%= customerList[i].state %></td>
+                                <td style="max-width: 150px"><%= customerList[i].email %></td>
+                                <td><%= customerList[i].phone %></td>
+                                <td style="min-width: 140px">
+                                    <a href="/update-user?uuid=<%= customerList[i].uuid%>" class="btn border-shadow update">
+                                        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                    </a>
+                                    <a href="/delete-user?uuid=<%= customerList[i].uuid%>" class="btn border-shadow delete" >
+                                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+
+<%- include('partials/footer') %>

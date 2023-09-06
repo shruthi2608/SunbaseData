@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/000/635/367/original/financial-investments-concept-business-assistant-vector-illustration.jpg') no-repeat center center fixed; /* Replace 'your-business-image.jpg' with your image URL */
+  background-size: cover;
+  filter: (5px); /* Apply a blur effect to the background image */
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: rgba(244, 244, 244, 0.8); /* Change container background color with opacity */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+.container .form{
+  padding: 2rem;
+}
+.form header{
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #34568B;
+}
+.form input{
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 16px;
+  margin-bottom: 1.2rem;
+  border: 1px solid #A9A9A9;
+  border-radius: 8px;
+  outline: none;
+}
+.form input:focus{
+  box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+}
+.form a{
+  font-size: 16px;
+  color: #009579;
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+.form input.button{
+  color: #fff;
+  background: #34568B;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: 0.4s;
+  border: none;
+  padding: 12px 20px;
+}
+.form input.button:hover{
+  background: #264A76;
+}
+.signup{
+  font-size: 16px;
+  text-align: center;
+  color: #34568B;
+}
+.signup label{
+  color: #009579;
+  cursor: pointer;
+}
+.signup label:hover{
+  text-decoration: underline;
+}

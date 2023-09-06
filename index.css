@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+
+:root{
+    --dark: #000000; /* Change to attractive black */
+    --light: #FF5733; /* Change to bright color */
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+    --rainbow-gradient: linear-gradient(45deg, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #8B00FF); /* Rainbow gradient */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    transition: all 0.3s ease; /* Add transition for smooth animations */
+}
+
+a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: var(--light); /* Change link color to bright color */
+}
+
+.container{
+    max-width: 95%;
+    margin: auto;
+    background: var(--light); /* Change container background color */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.nav-brand{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--light); /* Change brand text color */
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-shadow{
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef;
+}
+
+.text-dark{
+    color: var(--dark);
+}
+
+.inline{
+    display: inline-block;
+}
+
+.text-light{
+    color: var(--light);
+}
+
+.text-gradient{
+    background: var(--rainbow-gradient); /* Apply rainbow gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#header nav{
+    /*background-color: #06d6a0;*/
+    padding: 1em 0;
+    width: 100%;
+    background: var(--light); /* Change nav background color */
+}
+
+#site-main{
+    margin-top: 0.4em;
+    font-family: 'Barlow', sans-serif;
+    color: var(--light); /* Change text color */
+}
+
+#site-main .container .box-nav > a{
+    font-size: 1em;
+    padding: .5em 1em;
+}
+
+#site-main .container form{
+    margin: 0.75em 0;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    background-image: var(--rainbow-gradient); /* Apply rainbow background */
+    background-clip: padding-box;
+}
+
+.table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover{
+    background-color: transparent; /* Remove hover background color */
+}
+
+.table tr:hover td > a{
+    box-shadow: 0 0 10px var(--rainbow-gradient); /* Rainbow glow on hover */
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: var(--dark) ;
+    border-color: #57626e;
+}
+
+@media only screen and (max-width: 1024px){
+    table, thead, tbody, th, td, tr{
+        display: block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid var(--border);}
+
+    td{
+        border: none;
+        position: relative;
+    }
+
+}
+
+/*  add user & update user template */
+.form-title{
+    margin-top: 2em;
+}
+
+.form-title > h2{
+    padding: .5em 0;
+}
+
+.new_user{
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_user .form-group,
+#add_user .form-group{
+    margin: .4em 0;
+}
+
+#update_user .form-group input[type="text"],
+#update_user .form-group input[type="number"],
+#add_user .form-group input[type="text"],
+#add_user .form-group input[type="number"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_user .form-group .radio,
+#add_user .form-group .radio{
+    margin: 1em 2em;
+}
+
+#update_user .form-group .btn,
+#add_user .form-group .btn{
+    width: 100%;
+    padding: .9em 1em;
+    background-color: var(--dark); /* Change button background color */
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover{
+    background-color: var(--light); /* Change button hover background color */
+    color: var(--dark); /* Change button hover text color */
+    box-shadow: 0 0 10px var(--rainbow-gradient); /* Add rainbow glow on hover */
+}
